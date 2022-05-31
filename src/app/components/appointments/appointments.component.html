@@ -1,0 +1,18 @@
+<div>
+    <table class="table table-stripped">
+        <thead class="table-dark">
+            <tr>
+                <th>DueDate</th>
+                <th>StartTime</th>
+                <th>EndTime</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let appointment of appointments">
+                <td>{{appointment.dueDate}}</td>
+                <td>{{appointment.startTime}}</td>
+                <td>{{appointment.endTime}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

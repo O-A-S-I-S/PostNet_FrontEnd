@@ -1,0 +1,25 @@
+.wrap,
+.wrap2{ 
+  width:100px;
+  white-space: pre-wrap;      /* CSS3 */   
+  white-space: -moz-pre-wrap; /* Firefox */    
+  white-space: -pre-wrap;     /* Opera <7 */   
+  white-space: -o-pre-wrap;   /* Opera 7 */    
+  word-wrap: break-word;      /* IE */
+}
+
+.wrap{
+  border:1px solid red;
+  height:auto;
+}
+
+.wrap2 { 
+  border:1px solid blue;
+  height:100px;
+  overflow: auto;
+  width:100px;
+}
+
+.tabla2{
+  margin-top:50px;
+}

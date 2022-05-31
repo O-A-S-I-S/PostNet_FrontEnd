@@ -1,0 +1,22 @@
+
+<h4>Recetas</h4>
+<div>
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th>Prescription</th>
+                <th>Description</th>
+                <th>Medicines</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pres of prescriptions; ">
+                <td>{{pres.prescriptionId}}</td>
+                <td>{{pres.prescriptionDescription}}</td>
+                <td *ngFor="let med of pres.prescriptionMedicinesResponses">
+                    <tr>{{med.nameMedicine}}</tr>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
