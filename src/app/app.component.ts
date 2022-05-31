@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'PostNet_FrontEnd';
+  title = 'Lista de Horarios';
+  userId:Number = 1;
 }
