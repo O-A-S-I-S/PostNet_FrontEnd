@@ -1,0 +1,46 @@
+
+<h2>Lista Appointments por DNI</h2>
+
+<!-- <form action=""> -->
+        <div>
+        <input type="text" required [(ngModel)]="info.dni" #dni="ngModel" name="dni"/>
+        <button (click)="retrieveAppointmentByDni()">r</button>
+        <!-- <button type="button" (click)="retrieveAppointmentByDni(dni.value)"><img id="logoLupa" src="https://e7.pngegg.com/pngimages/213/564/png-clipart-magnifying-glass-magnification-magnifying-glass-glass-logo.png" alt=""></button>
+        </div> -->
+<!-- </form> -->
+  
+
+<table class="table table-stripped">
+    <thead class="table-dark">
+        <tr>
+            <th>Id</th>
+            <th>Paciente Dni</th>
+            <th>Medico Dni</th>
+            <th>dueDate</th>
+            <th>startTime</th>
+            <th>endTime</th>
+            <th>Precio</th>
+            <th>Metodo de Pago</th>
+
+        </tr>
+    </thead>
+    <tbody>
+       
+
+        <tr *ngFor="let appo of appointments|ObjToArray">
+            <td>{{appo.id}}</td>
+            <td>{{appo.patient|ObjToArray|GetFromArray}}</td>
+            <td>{{appo.medics|ObjToArray|GetFromArray}}</td>
+            <td>{{appo.dueDate}}</td>
+            <td>{{appo.startTime}}</td>
+            <td>{{appo.endTime}}</td>
+            <td>{{appo.cost}}</td>
+            <td>{{appo.paymentMethod}}</td>
+            
+        
+         <!-- {{ appo.key }} = {{ appo.value | json }} -->
+           
+        </tr>
+    </tbody>
+</table>
+
