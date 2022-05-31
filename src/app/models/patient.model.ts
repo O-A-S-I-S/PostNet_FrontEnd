@@ -1,5 +1,4 @@
 export class Patient {
-    id?:bigint;
     dni?:string;
     surname?:string;
     lastName?:string;

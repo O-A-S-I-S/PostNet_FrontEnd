@@ -15,6 +15,10 @@ h2 {
     color: #ffffff;
 }
 
+input:focus::placeholder{
+    color: transparent;
+}
+
 .light-blue {
     background-color: #7DB7FF;
 }

@@ -39,22 +39,21 @@ h2 {
 }
 
 .option-bg {
+    display: flex;
+    justify-content: center;
     border-radius: 20px;
     height: 90%;
     width: 30%;
     margin-top: auto;
     margin-bottom: auto;
-    display: flex;
-    flex-direction: column;
 }
 
 .access-button{
     position: absolute;
     top: 180px;
     height: 80px;
-    left: 100px;
     width: 240px;
-    display: block;
+    margin: 0 auto;
     background-color: rgba(142, 242, 125, 0.6);
     color: #fff;
     font-weight: 800;

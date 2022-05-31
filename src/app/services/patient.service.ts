@@ -1,11 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { environment } from 'src/environments/environment';
+import { environment } from './../../environments/environment';
 import { Patient } from '../models/patient.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PatientService {
   private baseUrl:string = environment.baseUrl;
@@ -40,11 +40,12 @@ export class PatientService {
     return this.http.get<Patient[]>(`${this.baseUrl}/patients?name=${name}`);
   }
 
-  // getByDniAndPassword(dni: any, password: any): Observable<Patient> {
-  //   return this.http.get(`${this.baseUrl}/patients/log_in?dni=${dni}&password=${password}`);
-  // }
-
-  getByDniAndPassword(data:any): Observable<any>{
-    return this.http.get(`${this.baseUrl}/patients/log_in`, data);
+  getByDniAndPassword(dni: any, password: any): Observable<Patient> {
+    return this.http.get(`${this.baseUrl}/patients/log_in?dni=${dni}&password=${password}`);
   }
+
+  // getByDniAndPassword(data:any): Observable<any>{
+  //   console.log(data);
+  //   return this.http.get(`${this.baseUrl}/patients/log_in`, data);
+  // }
 }

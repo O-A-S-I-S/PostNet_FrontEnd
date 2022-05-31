@@ -7,10 +7,10 @@
             <form (ngSubmit)="newLogIn()" #logInForm="ngForm">
                 <div *ngIf="!loggedIn">
                     <label class="align-center prompt">DNI   
-                        <input type="text" id="dni" placeholder="Ingrese su número de DNI" class="form-control" required [(ngModel)]="dni" name="dni"/>
+                        <input type="text" id="dni" placeholder="Ingrese su número de DNI" class="form-control" required [(ngModel)]="credentials.dni" #dni="ngModel" name="dni"/>
                     </label>
                     <label class="align-center prompt">CONTRASEÑA   
-                        <input type="text" id="password" placeholder="Ingrese su contraseña" class="form-control" required [(ngModel)]="password" name="password"/>
+                        <input type="text" id="password" placeholder="Ingrese su contraseña" class="form-control" required [(ngModel)]="credentials.password" name="password" #password="ngModel" />
                     </label>
                     <a><p class="text-danger text-center">¿Has olvidado tu contraseña?</p></a>
                     <div class="submit-button">

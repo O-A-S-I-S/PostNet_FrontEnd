@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { LogIn } from 'src/app/models/log-in.model';
 import { PatientService } from 'src/app/services/patient.service';
 
 @Component({
@@ -8,24 +8,25 @@ import { PatientService } from 'src/app/services/patient.service';
   styleUrls: ['./log-in.component.css']
 })
 export class LogInComponent implements OnInit {
-  dni = '';
-  password = '';
+  credentials: LogIn = {
+    dni:'',
+    password: '',
+  };
   loggedIn = false;
 
-  constructor(private patientService: PatientService,
-    private router: Router ) { }
+  constructor(private patientService: PatientService) { }
 
   ngOnInit(): void {
   }
 
   logIn(): void {
     const data = {
-      dni: this.dni,
-      password: this.password,
+      dni: this.credentials.dni,
+      password: this.credentials.password,
     };
-    console.log(this.dni);
-    console.log(this.password);
-    this.patientService.getByDniAndPassword(data).subscribe({
+    console.log(this.credentials.dni);
+    console.log(this.credentials.password);
+    this.patientService.getByDniAndPassword(data.dni, data.password).subscribe({
       next: (data) => {
         console.log(data);
         this.loggedIn = true;
@@ -36,8 +37,10 @@ export class LogInComponent implements OnInit {
 
   newLogIn(): void {
     this.loggedIn = false;
-    this.dni = '';
-    this.password = '';
+    this.credentials = {
+      dni:'',
+      password: '',
+    };
   }
 
 }

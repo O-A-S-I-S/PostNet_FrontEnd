@@ -9,53 +9,77 @@
                     <label class="prompt" for="dni">DNI:
                         <span class="text-danger">*</span>
                     </label>   
-                    <input type="text" placeholder="Ingrese el número de DNI" id="dni" name="dni" class="answer" required>
+                    <input type="text" placeholder="Ingrese el número de DNI" id="dni" name="dni" class="answer" required [(ngModel)]="patient.dni" #dni="ngModel">
                     <label class=" prompt" for="email">CORREO:
                         <span class="text-danger">*</span>
                     </label>   
-                    <input type="text" class="inline-block" placeholder="usuario@dominio.com" id="email" name="email" class="answer" required>
+                    <input type="email" class="inline-block" placeholder="usuario@dominio.com" id="email" name="email" class="answer" required [(ngModel)]="patient.email" #email="ngModel">
                     <label class=" prompt" for="telephone">TELÉFONO:</label>   
-                    <input type="text" placeholder="Número de teléfono" id="telephone" name="telephone" class="answer">
+                    <input type="text" placeholder="Número de teléfono" id="telephone" name="telephone" class="answer" [(ngModel)]="patient.telephone" #telephone="ngModel">
                     <label class=" prompt" for="cellphone">CELULAR:</label>   
-                    <input type="text" placeholder="Número de celular" id="cellphone" name="cellphone" class="answer">
+                    <input type="text" placeholder="Número de celular" id="cellphone" name="cellphone" class="answer" [(ngModel)]="patient.cellphone" #cellphone="ngModel">
                 </div>
                 <div class="form-row">
                     <label class=" prompt" for="surname">NOMBRES:
                         <span class="text-danger">*</span>
                     </label>
-                    <input type="text" placeholder="usuario@dominio.com" id="surname" name="surname" class="answer" required>
+                    <input type="text" placeholder="Ingrese nombre completo" id="surname" name="surname" class="answer" required [(ngModel)]="patient.surname" #surname="ngModel">
                 </div>
                 <div class="form-row">
                     <label class=" prompt" for="lastName">APELLIDOS:
                         <span class="text-danger">*</span>
                     </label>
-                    <input type="text" placeholder="usuario@dominio.com" id="lastName" name="lastName" class="answer" required>
+                    <input type="text" placeholder="Ingrese ambos apellidos" id="lastName" name="lastName" class="answer" required [(ngModel)]="patient.lastName" #lastName="ngModel">
                 </div>
                 <div class="form-group">
                     <label class=" prompt" for="birthDate">FECHA DE <span class="text-danger">*</span>
                         NACIMIENTO:
                     </label>   
-                    <input type="date" id="birthDate" name="birthDate" class="answer" required>
+                    <input type="date" id="birthDate" name="birthDate" class="answer" required [(ngModel)]="patient.birthDate" #birthDate="ngModel">
                     <label class=" prompt" for="bloodType">TIPO DE
                         SANGRE:
                         <span class="text-danger">*</span>
                     </label>   
-                    <input type="text" placeholder="usuario@dominio.com" id="bloodType" name="bloodType" class="answer" required>
+                    <div>
+                        <select name="bloodType" id="bloodType" class="answer" required [(ngModel)]="patient.bloodType" #bloodType="ngModel">
+                          <option value="">Seleccione el correcto</option>
+                          <option value="Oplus">O+</option>
+                          <option value="Ominus">O-</option>
+                          <option value="Aplus">A+</option>
+                          <option value="Aminus">A-</option>
+                          <option value="Bplus">B+</option>
+                          <option value="Bminus">B-</option>
+                          <option value="ABplus">AB+</option>
+                          <option value="ABminus">AB-</option>
+                        </select>
+                      </div>
+                </div>
+                <div class="form-row">
+                    <label class=" prompt" for="surname">CONTRASEÑA:
+                        <span class="text-danger">*</span>
+                    </label>
+                    <input type="text" placeholder="Ingrese una contraseña" id="password" name="password" class="answer" required [(ngModel)]="patient.password" #password="ngModel">
+                </div>
+                <div class="form-row">
+                    <label class=" prompt" for="lastName">VALIDACIÓN:
+                        <span class="text-danger">*</span>
+                    </label>
+                    <input type="text" placeholder="Vuelva a ingresar la contraseña" id="password" name="password" class="answer" required [(ngModel)]="patient.password" #password="ngModel">
                 </div>
                 <label class="text-center">
                     <input type="checkbox" name="agree"/>
                     <a class="text-danger text-center"> TÉRMINOS Y CONDICIONES</a>
                 </label>
+                <div class="submit-button">
+                    <button class="btn btn-primary"
+                        (click)="signIn()"
+                        [disabled]="!signInForm.form.valid"
+                    >Iniciar Sesión</button>
+                </div>
             </form>
         </div>
     </div>
     <div class="light-blue cross-extra">
-        <div class="submit-button">
-            <button class="btn btn-primary"
-                (click)="signIn()"
-                [disabled]="!signInForm.form.valid"
-            >Iniciar Sesión</button>
-        </div>
         <div *ngIf="signedIn">
             <h3>¡Inicio de sesión exitoso!</h3>
             <button class="btn btn-success" routerLink="sign-in">
