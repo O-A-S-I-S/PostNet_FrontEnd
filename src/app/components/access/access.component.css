@@ -1,0 +1,76 @@
+* {
+    font-family: Tahoma, sans-serif, sans-serif;
+}
+
+div{
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+h2 {
+    margin: 10% auto 0 auto;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-align: center;
+    color: #ffffff;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    max-height: 800px;
+}
+
+.cross-center{
+    display: flex;
+    flex-flow: nowrap;
+    margin: 0;
+    height: 50%;
+    width: 100%;
+    padding-left: 250px;
+}
+
+.cross-extra {
+    margin: 0 auto;
+    height: 25%;
+    width: 50%;
+    min-height: 100px;
+}
+
+.option-bg {
+    border-radius: 20px;
+    height: 90%;
+    width: 30%;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.access-button{
+    position: absolute;
+    top: 180px;
+    height: 80px;
+    left: 100px;
+    width: 240px;
+    display: block;
+    background-color: rgba(142, 242, 125, 0.6);
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.right{
+    margin-left: 10%;
+}
+
+.left{
+    margin-right: 10%;
+}
