@@ -1,0 +1,94 @@
+* {
+    font-family: Tahoma, sans-serif, sans-serif;
+}
+
+div{
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+h2 {
+    margin: 10% auto 0 auto;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-align: center;
+    color: #ffffff;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    max-height: 800px;
+}
+
+.cross-center{
+    display: flex;
+    flex-flow: nowrap;
+    margin: 0;
+    height: 50%;
+    width: 100%;
+    padding-left: 250px;
+}
+
+.cross-extra {
+    margin: 0 auto;
+    height: 25%;
+    width: 50%;
+    min-height: 100px;
+}
+
+.option-bg {
+    display:block;
+    justify-content: center;
+    border-radius: 20px;
+    height: 90%;
+    width: 30%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.access-button{
+    position: absolute;
+    top: 180px;
+    height: 80px;
+    width: 240px;
+    margin: 0 auto;
+    background-color: rgba(142, 242, 125, 0.6);
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.right{
+    margin-left: 10%;
+}
+
+.left{
+    margin-right: 10%;
+}
+
+.panel-list {
+    position:absolute;
+    padding: 10px;
+}
+
+.list-button {  
+    justify-content: center;
+    margin-left: 25%;
+    background-color: rgba(142, 242, 125, 0.6);
+    height: 80px;
+    width: 240px;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 10px;
+    margin-top:5px;
+    margin-bottom: 5px;
+    font-weight: 800;
+}

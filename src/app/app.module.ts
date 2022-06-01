@@ -11,6 +11,7 @@ import { LogInComponent } from './components/log-in/log-in.component';
 import { AccessComponent } from './components/access/access.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { AccessSelectionComponent } from './components/access-selection/access-selection.component';
+import { MedicSignUpComponent } from './medic-sign-up/medic-sign-up.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { AccessSelectionComponent } from './components/access-selection/access-s
     LogInComponent,
     AccessComponent,
     AccessSelectionComponent,
+    MedicSignUpComponent,
   ],
   imports: [
     BrowserModule,

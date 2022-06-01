@@ -8,8 +8,8 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 const routes: Routes = [
   {path:'', redirectTo: 'oasis', pathMatch: 'full'},
   {path:'oasis', component:AccessComponent},
-  {path:'sign-in', component:SignInComponent},
-  {path:'log-in', component:LogInComponent},
+  {path:'patient-sign-in', component:SignInComponent},
+  {path:'patient-log-in', component:LogInComponent},
   {path:'access-select', component:AccessSelectionComponent},
 
 ];
