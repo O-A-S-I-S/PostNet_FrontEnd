@@ -8,7 +8,7 @@ import { Pipe, PipeTransform } from "@angular/core";
 export class GetFromArray implements PipeTransform{
     transform(array:any=[]):any{
         Object.values(array);
-        return array[1];
+        return array[0];
         
     }
 }
