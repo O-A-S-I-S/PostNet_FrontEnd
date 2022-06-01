@@ -10,6 +10,7 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { LogInComponent } from './components/log-in/log-in.component';
 import { AccessComponent } from './components/access/access.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { AccessSelectionComponent } from './components/access-selection/access-selection.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     SignInComponent,
     LogInComponent,
     AccessComponent,
+    AccessSelectionComponent,
   ],
   imports: [
     BrowserModule,
